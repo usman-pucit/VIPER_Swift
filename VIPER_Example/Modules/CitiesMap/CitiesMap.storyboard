@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U5V-6u-MtN">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cities-->
+        <scene sceneID="SbF-7Z-xXh">
+            <objects>
+                <viewController storyboardIdentifier="CitiesMapViewController" id="BZO-RZ-Lp6" customClass="CitiesMapViewController" customModule="VIPER_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZJJ-0O-gcw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KYn-jy-cLV">
+                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BZO-RZ-Lp6" id="01S-qI-vJn"/>
+                                </connections>
+                            </mapView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gtc-ry-neG">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="color" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RsR-Wb-zLG" firstAttribute="bottom" secondItem="KYn-jy-cLV" secondAttribute="bottom" id="LoA-Py-bFO"/>
+                            <constraint firstItem="gtc-ry-neG" firstAttribute="centerX" secondItem="ZJJ-0O-gcw" secondAttribute="centerX" id="LvN-zk-sSu"/>
+                            <constraint firstItem="gtc-ry-neG" firstAttribute="centerY" secondItem="ZJJ-0O-gcw" secondAttribute="centerY" id="OjV-5p-fRq"/>
+                            <constraint firstItem="KYn-jy-cLV" firstAttribute="leading" secondItem="RsR-Wb-zLG" secondAttribute="leading" id="VON-o2-nmq"/>
+                            <constraint firstItem="KYn-jy-cLV" firstAttribute="top" secondItem="RsR-Wb-zLG" secondAttribute="top" id="cce-ys-GTB"/>
+                            <constraint firstItem="KYn-jy-cLV" firstAttribute="trailing" secondItem="RsR-Wb-zLG" secondAttribute="trailing" id="iP3-uT-OjS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RsR-Wb-zLG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cities" id="KTG-Cg-SPe"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="gtc-ry-neG" id="Xyz-5r-Nqh"/>
+                        <outlet property="mapView" destination="KYn-jy-cLV" id="DQn-PN-MFC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ama-h5-f0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448.80000000000001" y="-188.45577211394306"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a33-qi-RrH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U5V-6u-MtN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="F4R-gt-gaM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BZO-RZ-Lp6" kind="relationship" relationship="rootViewController" id="xfQ-hK-4BX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Io-U6-EDb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-490.39999999999998" y="-188.45577211394306"/>
+        </scene>
+    </scenes>
+</document>

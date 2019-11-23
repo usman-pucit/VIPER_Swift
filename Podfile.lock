@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.9.1)
+  - Presentr (1.9)
+
+DEPENDENCIES:
+  - Alamofire
+  - Presentr
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Presentr
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Presentr: 7078d7eb5d1661ebeaae60c9e42a1e534de1b993
+
+PODFILE CHECKSUM: ddf257b68c6e7eedb694d6b6d334784b46eb07dc
+
+COCOAPODS: 1.8.4
