@@ -1,7 +1,7 @@
 
 
 <img src="https://github.com/usman-pucit/VIPER_Swift/blob/developer/images/SwiftyVIPER.png"
-width="600" height="500">
+width="600" height="400">
 
 # Workflow Image:
 
