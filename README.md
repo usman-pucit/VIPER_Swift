@@ -10,12 +10,11 @@ width="600" height="250">
 
 #  Application Main Components
 
-### VIPER architecture
-### Networking Layer user with APIRouter & Codable 
-### Generics
-### Mapkit
- 
+ * `VIPER` VIPER architecture 
+ * `Alamofire` APIRouter & Codable (simple network layer for a small project)
+ * `Mapkit` - Annotation on Mapview
+
 
 # Venders or Third party
 
-### Alamofire
+ * `Alamofire` Alamofire for networking 
