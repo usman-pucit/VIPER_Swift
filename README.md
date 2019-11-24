@@ -18,3 +18,9 @@ width="600" height="250">
 # Venders or Third party
 
  * `Alamofire` Alamofire for networking 
+
+# TODO
+
+ * `Unit testing` 
+ * `Map Clustering`
+ 
