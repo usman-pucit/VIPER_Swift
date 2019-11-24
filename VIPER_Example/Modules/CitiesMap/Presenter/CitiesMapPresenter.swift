@@ -10,16 +10,22 @@ import Foundation
 import MapKit
 
 class CitiesMapPresenter {
+    // MARK: - Properties
+    
     weak var view: CitiesMapView?
     var router: CitiesMapWireframe?
     var interactor: CitiesMapUseCase?
 }
 
 extension CitiesMapPresenter: CitiesMapPresentation {
+    // MARK: - Function
+    
     func getCityForecast(latitude: Double, longitude: Double) {
         view?.showLoader()
         interactor?.fetchForcastDetail(latitude: latitude, longitude: longitude)
     }
+    
+    // MARK: - Function
     
     func getMapviewAnnotations() -> [CustomAnnoation] {
         var annotations = [CustomAnnoation]()
@@ -34,10 +40,14 @@ extension CitiesMapPresenter: CitiesMapPresentation {
 }
 
 extension CitiesMapPresenter: CitiesMapUseCaseOutput {
+    // MARK: - Function
+    
     func onResponse(response: ForecastResponseModel) {
         view?.onResponse(response: response)
         view?.hideLoader()
     }
+    
+    // MARK: - Function
     
     func onFailure(error: Error) {
         view?.hideLoader()

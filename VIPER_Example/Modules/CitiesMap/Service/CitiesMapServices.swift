@@ -10,6 +10,9 @@ import Alamofire
 import Foundation
 
 class CitiesMapServices {
+    
+    // MARK: - Function
+    
     internal func executeForcastDetail(latitude: Double, longitude: Double, completionHandler: @escaping (DataResponse<ForecastResponseModel>) -> ()) {
         let route = APIRouter.forecast(latitudes: latitude, longitude: longitude)
 
