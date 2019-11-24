@@ -16,9 +16,9 @@ class CitiesMapInteractor {
 }
 
 extension CitiesMapInteractor: CitiesMapUseCase {
-    //////////////////////--------------------------------------------------------------------///////////////////////////////
+    // MARK: - Function
     
-    ////////FOR Pakistan Cities
+    // Annotation points
     
     func getCitiesPositionArray() -> [CitiesPositionModel] {
         var cities = [CitiesPositionModel]()
@@ -40,25 +40,7 @@ extension CitiesMapInteractor: CitiesMapUseCase {
         return cities
     }
     
-    //////////////////////--------------------------------------------------------------------///////////////////////////////
-    
-    ////////FOR US Cities
-    
-//    func getCitiesPositionArray() -> [CitiesPositionModel] {
-//        var cities = [CitiesPositionModel]()
-//        cities.append(CitiesPositionModel(name: "", latitude: 47.1443, longitude: -122.1408))
-//        cities.append(CitiesPositionModel(name: "", latitude: 48.5602, longitude: -122.4311))
-//        cities.append(CitiesPositionModel(name: "", latitude: 46.6085, longitude: -121.6702))
-//        cities.append(CitiesPositionModel(name: "", latitude: 47.5862, longitude: 47.5862))
-//        cities.append(CitiesPositionModel(name: "", latitude: 47.5207, longitude: -122.5196))
-//        cities.append(CitiesPositionModel(name: "", latitude: 47.8432, longitude: -120.8157))
-//        cities.append(CitiesPositionModel(name: "", latitude: 46.6437, longitude: -118.5565))
-//        cities.append(CitiesPositionModel(name: "", latitude: 47.6813, longitude: -118.0164))
-//        cities.append(CitiesPositionModel(name: "", latitude: 46.754, longitude: -118.3106))
-//        cities.append(CitiesPositionModel(name: "", latitude: 34.1463, longitude: 73.211684))
-//
-//        return cities
-//    }
+    // MARK: - Function
     
     func fetchForcastDetail(latitude: Double, longitude: Double) {
         services.executeForcastDetail(latitude: latitude, longitude: longitude) { response in

@@ -10,10 +10,12 @@ import Foundation
 import MapKit
 
 class MapAnnotationView: MKAnnotationView {
+  
     // MARK: Variables
 
     weak var delegate: MapAnnoationDelegate?
 
+    // MARK: - init
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         self.canShowCallout = false
@@ -26,6 +28,8 @@ class MapAnnotationView: MKAnnotationView {
         self.image = UIImage(named: "city_icon")
     }
 
+    // MARK: - Function
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         self.delegate?.annotationDidTapped(coordinates: annotation?.coordinate)

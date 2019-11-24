@@ -29,31 +29,39 @@ class CitiesMapViewController: BaseViewController {
         setupMapAnnoations()
     }
     
+    // MARK: - Function
+    
     private func setupMapAnnoations() {
         mapView.addAnnotations(presenter?.getMapviewAnnotations() ?? [])
-        
         let latDelta: CLLocationDegrees = 12
         let lonDelta: CLLocationDegrees = 12
         let span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
-        
         let region = MKCoordinateRegion(center: mapView.annotations[0].coordinate, span: span)
         mapView.setRegion(region, animated: false)
     }
 }
 
 extension CitiesMapViewController: CitiesMapView {
+    // MARK: - Function
+    
     func showLoader() {
         activityIndicator.startAnimating()
     }
+    
+    // MARK: - Function
     
     func hideLoader() {
         activityIndicator.stopAnimating()
     }
     
+    // MARK: - Function
+    
     func onResponse(response: ForecastResponseModel) {
         showAlertWith(message: response.currently?.summary ?? "") { _ in
         }
     }
+    
+    // MARK: - Function
     
     func onFailure(error: Error) {
         showAlertWith(message: error.localizedDescription) { _ in
@@ -61,11 +69,15 @@ extension CitiesMapViewController: CitiesMapView {
     }
 }
 
+// MARK: - Delegate
+
 extension CitiesMapViewController: MapAnnoationDelegate {
     func annotationDidTapped(coordinates: CLLocationCoordinate2D?) {
         presenter?.getCityForecast(latitude: coordinates?.latitude ?? 0.0, longitude: coordinates?.longitude ?? 0.0)
     }
 }
+
+// MARK: - Delegate
 
 extension CitiesMapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
