@@ -1,12 +1,12 @@
 
 
 <img src="https://github.com/usman-pucit/VIPER_Swift/blob/developer/images/SwiftyVIPER.png"
-width="320" height="560">
+width="600" height="500">
 
 # Workflow Image:
 
 <img src="https://github.com/usman-pucit/VIPER_Swift/blob/developer/images/bpM7t.png"
-width="320" height="560">
+width="600" height="360">
 
 #  Application Main Components
 
